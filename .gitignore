@@ -1,0 +1,7 @@
+/.idea/
+/.pytest_cache/
+/.tox/
+/docs/build/
+/venv/
+/SampleProject.egg-info/
+__pycache__/
