@@ -1,6 +1,9 @@
 # PythonExample
 ToxとかSphinxとかloggingとかUnitTestとかのサンプルプロジェクト
 
+Sphinxで生成したドキュメントはここ
+https://hoge42.github.io/PythonExample/docs/build/index.html
+
 ## インストール手順
 
 ### 1. Python仮想環境を作成
