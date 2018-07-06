@@ -11,7 +11,7 @@ Sample Projectのドキュメント
    :caption: 目次
 
    install
-   modules/modules
+   ソースコード <modules/modules>
    todo_list
 
 
