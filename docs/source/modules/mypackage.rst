@@ -12,6 +12,7 @@ Subpackages
 .. toctree::
 
     mypackage.docstring
+    mypackage.logging
     mypackage.subpackage
 
 Submodules

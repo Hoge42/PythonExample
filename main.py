@@ -1,3 +1,6 @@
+import argparse
+
+
 from mypackage import mymodule
 import logging.config
 
@@ -9,5 +12,8 @@ def main():
 
 
 if __name__ == '__main__':
-    logging.config.fileConfig("development.ini")
+    parser = argparse.ArgumentParser(description='サンプルプロジェクト')
+    parser.add_argument('config', type=str, help='コンフィグファイルパス')
+    args = parser.parse_args()
+    logging.config.fileConfig(args.config)
     main()
