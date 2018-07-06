@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="mypackage.subpackage package" href="mypackage.subpackage.html" />
+    <link rel="next" title="mypackage.logging package" href="mypackage.logging.html" />
     <link rel="prev" title="mypackage package" href="mypackage.html" /> 
 
   
@@ -85,6 +85,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="mypackage.html">mypackage package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="mypackage.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">mypackage.docstring package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mypackage.logging.html">mypackage.logging package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mypackage.subpackage.html">mypackage.subpackage package</a></li>
 </ul>
 </li>
@@ -166,97 +167,87 @@
 <span id="mypackage-docstring-package"></span><h1>mypackage.docstring package<a class="headerlink" href="#module-mypackage.docstring" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="module-mypackage.docstring.example_google">
 <span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-mypackage.docstring.example_google" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Example Google style docstrings.</p>
-<p>This module demonstrates documentation as specified by the <a class="reference external" href="http://google.github.io/styleguide/pyguide.html">Google Python
-Style Guide</a>. Docstrings may extend over multiple lines. Sections are created
-with a section header and a colon followed by a block of indented text.</p>
-<p class="rubric">Example</p>
-<p>Examples can be given using either the <code class="docutils literal notranslate"><span class="pre">Example</span></code> or <code class="docutils literal notranslate"><span class="pre">Examples</span></code>
-sections. Sections support any reStructuredText formatting, including
-literal blocks:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python example_google.py
-</pre></div>
-</div>
-<p>Section breaks are created by resuming unindented text. Section breaks
-are also implicitly created anytime a new section starts.</p>
+<p>Google StyleのDocstringのサンプル</p>
+<p>このモジュールはnapoleonの <a class="reference external" href="http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html">Example Google Style Python Docstrings</a> の翻訳</p>
+<p>本家からいろいろアレンジしたり省略したりしている</p>
+<p>仕様の詳細は <a class="reference external" href="http://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a> を見るべし</p>
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.module_level_variable1">
 <code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">module_level_variable1</code><a class="headerlink" href="#mypackage.docstring.example_google.module_level_variable1" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>int</em> -- Module level variables may be documented in
-either the <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> section of the module docstring, or in an
-inline docstring immediately following the variable.</p>
-<p>Either form is acceptable, but the two should not be mixed. Choose
-one convention to document module level variables and be consistent
-with it.</p>
+<dd><p><em>int</em> -- モジュールレベルの変数その1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mypackage.docstring.example_google.module_level_variable2">
+<code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">module_level_variable2</code><a class="headerlink" href="#mypackage.docstring.example_google.module_level_variable2" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p><em>int</em> -- モジュールレベルの変数その2</p>
 </dd></dl>
 
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">課題</p>
 <ul class="last simple">
-<li>For module TODOs</li>
-<li>You have to also use <code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> extension</li>
+<li>モジュールのTODOのサンプル</li>
+<li><code class="docutils literal notranslate"><span class="pre">sphinx.ext.todo</span></code> のSphinx拡張をconf.pyに追加するべし</li>
 </ul>
 </div>
 <dl class="class">
 <dt id="mypackage.docstring.example_google.ExampleClass">
 <em class="property">class </em><code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">ExampleClass</code><span class="sig-paren">(</span><em>param1</em>, <em>param2</em>, <em>param3</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#ExampleClass"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>The summary line for a class docstring should fit on one line.</p>
-<p>If the class has public attributes, they may be documented here
-in an <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> section and follow the same formatting as a
-function's <code class="docutils literal notranslate"><span class="pre">Args</span></code> section. Alternatively, attributes may be documented
-inline with the attribute's declaration (see __init__ method below).</p>
-<p>Properties created with the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be documented
-in the property's getter method.</p>
+<p>1行目にはクラスの概要を書く</p>
+<p>クラスがpublic属性を持つなら、Argsセクションと同じフォーマットで
+Attributesセクションに書ける。
+あるいは__init__の中での代入のところでインラインでも書ける。</p>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> デコレータで作ったプロパティの説明ははプロパティのゲッターに書くべきだ。</p>
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.attr1">
 <code class="descname">attr1</code><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.attr1" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>str</em> -- Description of <cite>attr1</cite>.</p>
+<dd><p><em>str</em> -- ほげ</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.attr2">
 <code class="descname">attr2</code><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.attr2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional -- Description of <cite>attr2</cite>.</p>
+<dd><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional -- ぴよ</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.attr3">
 <code class="descname">attr3</code><em class="property"> = None</em><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.attr3" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Doc comment <em>inline</em> with attribute</p>
+<dd><p>public属性のコメントは行末にもインラインで書ける</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.attr4">
 <code class="descname">attr4</code><em class="property"> = None</em><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.attr4" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>list(str)</em> -- Doc comment <em>before</em> attribute, with type specified</p>
+<dd><p><em>list(str)</em> -- public属性のコメントは前の行にもインラインで書ける</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.attr5">
 <code class="descname">attr5</code><em class="property"> = None</em><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.attr5" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>str</em> -- Docstring <em>after</em> attribute, with type specified.</p>
+<dd><p><em>str</em> -- docstringは行のあとにも書けるぞ</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="mypackage.docstring.example_google.ExampleClass.example_method">
 <code class="descname">example_method</code><span class="sig-paren">(</span><em>param1</em>, <em>param2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#ExampleClass.example_method"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.example_method" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Class methods are similar to regular functions.</p>
+<dd><p>クラスメソッドは関数と同様に書ける</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">Do not include the <cite>self</cite> parameter in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section.</p>
+<p class="last">ただしself引数はArgsセクションには書かない</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>param1</strong> -- The first parameter.</li>
-<li><strong>param2</strong> -- The second parameter.</li>
+<li><strong>param1</strong> -- ほげ</li>
+<li><strong>param2</strong> -- ぴよ</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">True if successful, False otherwise.</p>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">成功ならTrue、それ以外はFalse</p>
 </td>
 </tr>
 </tbody>
@@ -266,16 +257,14 @@ in the property's getter method.</p>
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.readonly_property">
 <code class="descname">readonly_property</code><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.readonly_property" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>str</em> -- Properties should be documented in their getter method.</p>
+<dd><p><em>str</em> -- プロパティの説明はゲッターメソッドに書くべきだ</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleClass.readwrite_property">
 <code class="descname">readwrite_property</code><a class="headerlink" href="#mypackage.docstring.example_google.ExampleClass.readwrite_property" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>list(str)</em> -- Properties with both a getter and setter
-should only be documented in their getter method.</p>
-<p>If the setter method contains notable behavior, it should be
-mentioned here.</p>
+<dd><p><em>list(str)</em> -- ゲッターとセッターをもつプロパティの説明はゲッターのみに書くべきだ</p>
+<p>もしセッターメソッドが特殊な動作をするなら、それはここに書くべきだ</p>
 </dd></dl>
 
 </dd></dl>
@@ -284,22 +273,20 @@ mentioned here.</p>
 <dt id="mypackage.docstring.example_google.ExampleError">
 <em class="property">exception </em><code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">ExampleError</code><span class="sig-paren">(</span><em>msg</em>, <em>code</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#ExampleError"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.ExampleError" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>Exceptions are documented in the same way as classes.</p>
-<p>The __init__ method may be documented in either the class level
-docstring, or as a docstring on the __init__ method itself.</p>
-<p>Either form is acceptable, but the two should not be mixed. Choose one
-convention to document the __init__ method and be consistent with it.</p>
+<p>例外はクラスと同様にdocstringを書ける</p>
+<p>__init__メソッドのdocstringはクラスレベルにも書ける。
+どっちに書いても構わないが、混在してはいけない。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">Do not include the <cite>self</cite> parameter in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section.</p>
+<p class="last">self引数はArgsに書かないこと</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first last simple">
-<li><strong>msg</strong> (<em>str</em>) -- Human readable string describing the exception.</li>
-<li><strong>code</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) -- Error code.</li>
+<li><strong>msg</strong> (<em>str</em>) -- 例外の説明文</li>
+<li><strong>code</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) -- エラーコード</li>
 </ul>
 </td>
 </tr>
@@ -308,13 +295,13 @@ convention to document the __init__ method and be consistent with it.</p>
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleError.msg">
 <code class="descname">msg</code><a class="headerlink" href="#mypackage.docstring.example_google.ExampleError.msg" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>str</em> -- Human readable string describing the exception.</p>
+<dd><p><em>str</em> -- 例外の説明文</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="mypackage.docstring.example_google.ExampleError.code">
 <code class="descname">code</code><a class="headerlink" href="#mypackage.docstring.example_google.ExampleError.code" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>int</em> -- Exception error code.</p>
+<dd><p><em>int</em> -- エラーコード</p>
 </dd></dl>
 
 </dd></dl>
@@ -322,20 +309,20 @@ convention to document the __init__ method and be consistent with it.</p>
 <dl class="function">
 <dt id="mypackage.docstring.example_google.example_generator">
 <code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">example_generator</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#example_generator"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.example_generator" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generators have a <code class="docutils literal notranslate"><span class="pre">Yields</span></code> section instead of a <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section.</p>
+<dd><p>ジェネレーターのサンプル</p>
+<p>Returnsの代わりにYieldsを書く</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>n</strong> (<em>int</em>) -- The upper limit of the range to generate, from 0 to <cite>n</cite> - 1.</td>
+<tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><strong>n</strong> (<em>int</em>) -- 生成値の上限値で、0から <cite>n</cite> - 1の範囲</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><em>int</em> -- The next number in the range of 0 to <cite>n</cite> - 1.</td>
+<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><em>int</em> -- 0 から <cite>n</cite> - 1の次の値</td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<p>Examples should be written in doctest format, and should illustrate how
-to use the function.</p>
+<p>ExamplesにはDoctestのフォーマットで、この関数がどのように使われるかを書こう</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">example_generator</span><span class="p">(</span><span class="mi">4</span><span class="p">)])</span>
 <span class="go">[0, 1, 2, 3]</span>
 </pre></div>
@@ -345,18 +332,18 @@ to use the function.</p>
 <dl class="function">
 <dt id="mypackage.docstring.example_google.function_with_pep484_type_annotations">
 <code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">function_with_pep484_type_annotations</code><span class="sig-paren">(</span><em>param1: int</em>, <em>param2: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#function_with_pep484_type_annotations"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.function_with_pep484_type_annotations" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Example function with PEP 484 type annotations.</p>
+<dd><p>型ヒントを使用する関数のサンプル</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>param1</strong> -- The first parameter.</li>
-<li><strong>param2</strong> -- The second parameter.</li>
+<li><strong>param1</strong> -- ほげ</li>
+<li><strong>param2</strong> -- ぴよ</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">The return value. True for success, False otherwise.</p>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first last">成功したらTrue、それ以外はFalse</p>
 </td>
 </tr>
 </tbody>
@@ -366,21 +353,18 @@ to use the function.</p>
 <dl class="function">
 <dt id="mypackage.docstring.example_google.function_with_types_in_docstring">
 <code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">function_with_types_in_docstring</code><span class="sig-paren">(</span><em>param1</em>, <em>param2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#function_with_types_in_docstring"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.function_with_types_in_docstring" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Example function with types documented in the docstring.</p>
-<p><a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a> type annotations are supported. If attribute, parameter, and
-return types are annotated according to <a class="reference external" href="https://www.python.org/dev/peps/pep-0484/">PEP 484</a>, they do not need to be
-included in the docstring:</p>
+<dd><p>Docstringで型を指定する関数のサンプル</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>param1</strong> (<em>int</em>) -- The first parameter.</li>
-<li><strong>param2</strong> (<em>str</em>) -- The second parameter.</li>
+<li><strong>param1</strong> (<em>int</em>) -- ほげ</li>
+<li><strong>param2</strong> (<em>str</em>) -- ぴよ</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first">The return value. True for success, False otherwise.</p>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first">成功したらTrue、それ以外はFalse</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">戻り値の型:</th><td class="field-body"><p class="first last">bool</p>
@@ -393,19 +377,14 @@ included in the docstring:</p>
 <dl class="function">
 <dt id="mypackage.docstring.example_google.module_level_function">
 <code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">module_level_function</code><span class="sig-paren">(</span><em>param1</em>, <em>param2=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/docstring/example_google.html#module_level_function"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.docstring.example_google.module_level_function" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>This is an example of a module level function.</p>
-<p>Function parameters should be documented in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section. The name
-of each parameter is required. The type and description of each parameter
-is optional, but should be included if not obvious.</p>
-<p>If *args or **kwargs are accepted,
-they should be listed as <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>.</p>
-<p>The format for a parameter is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="p">(</span><span class="nb">type</span><span class="p">):</span> <span class="n">description</span>
-    <span class="n">The</span> <span class="n">description</span> <span class="n">may</span> <span class="n">span</span> <span class="n">multiple</span> <span class="n">lines</span><span class="o">.</span> <span class="n">Following</span>
-    <span class="n">lines</span> <span class="n">should</span> <span class="n">be</span> <span class="n">indented</span><span class="o">.</span> <span class="n">The</span> <span class="s2">&quot;(type)&quot;</span> <span class="ow">is</span> <span class="n">optional</span><span class="o">.</span>
+<dd><p>モジュールレベル関数のサンプル</p>
+<p>関数のパラメータはArgsに書くべき。各パラメータ名は必須。
+型と説明は省略可能だが、自明でないなら書くべきだ</p>
+<p>引数のフォーマットは次のように書く:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>変数名 (型): 説明
+    説明は複数行で書ける。二行目以降はインデントする
 
-    <span class="n">Multiple</span> <span class="n">paragraphs</span> <span class="n">are</span> <span class="n">supported</span> <span class="ow">in</span> <span class="n">parameter</span>
-    <span class="n">descriptions</span><span class="o">.</span>
+    空行を挟むと段落を分けられる
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -413,21 +392,17 @@ they should be listed as <code class="docutils literal notranslate"><span class=
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">パラメータ:</th><td class="field-body"><ul class="first simple">
-<li><strong>param1</strong> (<em>int</em>) -- The first parameter.</li>
-<li><strong>param2</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) -- The second parameter. Defaults to None.
-Second line of description should be indented.</li>
-<li><strong>*args</strong> -- Variable length argument list.</li>
-<li><strong>**kwargs</strong> -- Arbitrary keyword arguments.</li>
+<li><strong>param1</strong> (<em>int</em>) -- ほげ</li>
+<li><strong>param2</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) -- デフォルトはNone
+2行目はインデントする必要がある</li>
+<li><strong>*args</strong> -- 位置引数</li>
+<li><strong>**kwargs</strong> -- キーワード引数</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first"><p>True if successful, False otherwise.</p>
-<p>The return type is optional and may be specified at the beginning of
-the <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section followed by a colon.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section may span multiple lines and paragraphs.
-Following lines should be indented to match the first line.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">Returns</span></code> section supports any reStructuredText formatting,
-including literal blocks:</p>
+<tr class="field-even field"><th class="field-name">戻り値:</th><td class="field-body"><p class="first"><p>成功したらTrue、それ以外はFalse</p>
+<p>引数の説明と同様にインデントをつけて複数行で書ける</p>
+<p>reStructuredTextのフォーマットも使える:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s1">&#39;param1&#39;</span><span class="p">:</span> <span class="n">param1</span><span class="p">,</span>
     <span class="s1">&#39;param2&#39;</span><span class="p">:</span> <span class="n">param2</span>
@@ -441,22 +416,13 @@ including literal blocks:</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code> -- The <code class="docutils literal notranslate"><span class="pre">Raises</span></code> section is a list of all exceptions
-that are relevant to the interface.</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> -- If <cite>param2</cite> is equal to <cite>param1</cite>.</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">AttributeError</span></code> -- この関数が投げる例外のリスト。これは引数に関連するエラー</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code> -- params1とparams2が等しいとき</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="data">
-<dt id="mypackage.docstring.example_google.module_level_variable2">
-<code class="descclassname">mypackage.docstring.example_google.</code><code class="descname">module_level_variable2</code><em class="property"> = 98765</em><a class="headerlink" href="#mypackage.docstring.example_google.module_level_variable2" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p><em>int</em> -- Module level variable documented inline.</p>
-<p>The docstring may span multiple lines. The type may optionally be specified
-on the first line, separated by a colon.</p>
 </dd></dl>
 
 </div>
@@ -470,7 +436,7 @@ on the first line, separated by a colon.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mypackage.subpackage.html" class="btn btn-neutral float-right" title="mypackage.subpackage package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mypackage.logging.html" class="btn btn-neutral float-right" title="mypackage.logging package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="mypackage.html" class="btn btn-neutral" title="mypackage package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>mypackage.subpackage package &mdash; Sample Project 0.1 ドキュメント</title>
+  <title>mypackage.logging package &mdash; Sample Project 0.1 ドキュメント</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="TODOリスト" href="../todo_list.html" />
-    <link rel="prev" title="mypackage.logging package" href="mypackage.logging.html" /> 
+    <link rel="next" title="mypackage.subpackage package" href="mypackage.subpackage.html" />
+    <link rel="prev" title="mypackage.docstring package" href="mypackage.docstring.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,8 +85,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="mypackage.html">mypackage package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="mypackage.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="mypackage.docstring.html">mypackage.docstring package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mypackage.logging.html">mypackage.logging package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">mypackage.subpackage package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mypackage.logging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mypackage.subpackage.html">mypackage.subpackage package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mypackage.html#module-mypackage.mymodule">Submodules</a></li>
@@ -144,13 +144,13 @@
         
           <li><a href="mypackage.html">mypackage package</a> &raquo;</li>
         
-      <li>mypackage.subpackage package</li>
+      <li>mypackage.logging package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/modules/mypackage.subpackage.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/modules/mypackage.logging.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -163,19 +163,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-mypackage.subpackage">
-<span id="mypackage-subpackage-package"></span><h1>mypackage.subpackage package<a class="headerlink" href="#module-mypackage.subpackage" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="module-mypackage.subpackage.submodule">
-<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-mypackage.subpackage.submodule" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<dl class="function">
-<dt id="mypackage.subpackage.submodule.print_working_directory">
-<code class="descclassname">mypackage.subpackage.submodule.</code><code class="descname">print_working_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/subpackage/submodule.html#print_working_directory"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.subpackage.submodule.print_working_directory" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>作業中のディレクトリを標準出力する</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">課題</p>
-<p class="last">ソースを見よ</p>
+  <div class="section" id="module-mypackage.logging">
+<span id="mypackage-logging-package"></span><h1>mypackage.logging package<a class="headerlink" href="#module-mypackage.logging" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="module-mypackage.logging.example">
+<span id="submodules"></span><h2>Submodules<a class="headerlink" href="#module-mypackage.logging.example" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ログ出力のサンプル</p>
+<p>ログ出力はlogging.getLoggerでロガーを取得して使う。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
 </div>
-</dd></dl>
+<p><code class="docutils literal notranslate"><span class="pre">logging.info('foo')</span></code> などとはしてはいけない。
+loggingに直接ログを流すとrootロガーを使用するので、ログ出力の分離ができない。
+つまり誰がログを吐いたのか特定するのを難しくするし、パッケージ・ライブラリごとの
+ログ出力レベルの変更などができないのだ。</p>
+<p><code class="docutils literal notranslate"><span class="pre">logger</span> <span class="pre">=</span> <span class="pre">getLogger(__name__)</span></code> とするとモジュール単位でロガーが取得できる。
+この場合のロガーは <cite>mypackage.logging.example</cite> になる。</p>
+<p>モジュール単位でログ出力を分離するとロガーは木構造になっている。
+例えばmypackage以下はファイルに出力、mypackage.subpackage以下はエラー時にメールを送信といったように
+パッケージごとに出力方法やログレベル等を設定できる。</p>
+<dl class="function">
+<dt id="mypackage.logging.example.run">
+<code class="descclassname">mypackage.logging.example.</code><code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mypackage/logging/example.html#run"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#mypackage.logging.example.run" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 </div>
@@ -188,10 +200,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../todo_list.html" class="btn btn-neutral float-right" title="TODOリスト" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mypackage.subpackage.html" class="btn btn-neutral float-right" title="mypackage.subpackage package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mypackage.logging.html" class="btn btn-neutral" title="mypackage.logging package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mypackage.docstring.html" class="btn btn-neutral" title="mypackage.docstring package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
