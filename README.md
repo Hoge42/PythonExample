@@ -1,4 +1,6 @@
 # PythonExample
+[![Build Status](https://travis-ci.org/Hoge42/PythonExample.svg?branch=master)](https://travis-ci.org/Hoge42/PythonExample)
+
 ToxとかSphinxとかloggingとかUnitTestとかのサンプルプロジェクト
 
 Sphinxで生成したドキュメントはここ
